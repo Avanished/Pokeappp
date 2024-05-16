@@ -1,19 +1,49 @@
-.arena{
+.arena {
     display: flex;
     height: 300px;
     background-image: url('./fondo.png');
     background-repeat: no-repeat;
     background-size: contain;
 }
-#poke{
+
+#poke {
     height: 150px;
     position: fixed;
     top: 240px;
     left: 100px;
 }
-#poke2{
+
+#poke2 {
     height: 150px;
     position: fixed;
     top: 150px;
     left: 300px;
+}
+
+@keyframes parpadear {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes rotarDerecha {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(90deg); }
+}
+
+@keyframes rotarIzquierda {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-90deg); }
+}
+
+.parpadear {
+    animation: parpadear 0.5s infinite;
+}
+
+.rotarDerecha {
+    animation: rotarDerecha 0.5s forwards;
+}
+
+.rotarIzquierda {
+    animation: rotarIzquierda 0.5s forwards;
 }
